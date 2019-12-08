@@ -1,33 +1,31 @@
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+      I’m Sarah Dayan, a Sr. Software Engineer currently working as Tech Lead of
+      the Doc Squad at
+      <a href="https://www.algolia.com/" target="_blank" rel="noopener"
+        >Algolia</a
+      >. I mostly do front-end development, and I’m a
+      <a href="https://vuejs.org/" rel="noopener">Vue.js</a> and CSS nerd. I
+      can't shut up about test-driven development and utility-first CSS. I also
+      share what I learn on my blog
+      <a href="http://frontstuff.io" target="_blank" rel="noopener"
+        >frontstuff.io</a
+      >, or at <g-link to="/talks"> meetups and conferences</g-link>.
     </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
+    <p>
+      Among other things, I created
+      <a href="https://github.com/sarahdayan/dinero.js" rel="noopener"
+        >Dinero.js</a
+      >, a multi-environment JavaScript library to handle monetary values.
     </p>
-
   </Layout>
 </template>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: "Home"
   }
-}
+};
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>

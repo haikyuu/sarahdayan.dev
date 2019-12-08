@@ -1,0 +1,53 @@
+[
+  {
+    "title": "Journey to JavaScript development",
+    "link": "https://www.youtube.com/watch?v=62C-E6WL0_A",
+    "platform": "Prismic Studio",
+    "hosts": ["Sadek Drobi"],
+    "date": "2019-11-27"
+  },
+  {
+    "title": "Moving from PHP (or any other programming language) to JavaScript",
+    "link": "https://www.youtube.com/watch?v=HW0BvDCSspE",
+    "platform": "Prismic Studio",
+    "hosts": ["Sadek Drobi"],
+    "date": "2019-11-14"
+  },
+  {
+    "title": "CSS best practices - Introduction to Atomic CSS",
+    "link": "https://www.youtube.com/watch?v=PcrzsCdoFoY",
+    "platform": "Prismic Studio",
+    "hosts": ["Sadek Drobi"],
+    "date": "2019-10-16"
+  },
+  {
+    "title": "Utility-First CSS S06E8",
+    "link": "https://www.youtube.com/watch?v=Uzwbij42AjI",
+    "platform": "Prismic Studio",
+    "hosts": ["Rob Ocel"],
+    "guests": ["Jake Dohm", "Adam Wathan"],
+    "date": "2019-07-10"
+  },
+  {
+    "title": "My JavaScript Story #113",
+    "link": "https://devchat.tv/my-javascript-story/mjs-113-sarah-dayan/",
+    "platform": "Devchat.tv",
+    "hosts": ["Charles Max Wood"],
+    "date": "2019-06-25"
+  },
+  {
+    "title": "JavaScript Jabber #351",
+    "link": "https://devchat.tv/js-jabber/jsj-351-dinero-js-with-sarah-dayan/",
+    "platform": "Devchat.tv",
+    "hosts": ["Charles Max Wood"],
+    "guests": ["Joe Eames", "Aimee Knight", "Chris Ferdinandi", "AJ O’Neal"],
+    "date": "2019-02-12"
+  },
+  {
+    "title": "On Frontend Development and Staying Curious",
+    "link": "https://www.samjarman.co.nz/blog/sarah-dayan",
+    "platform": "Sam Jarman",
+    "hosts": ["Sam Jarman"],
+    "date": "2018-04-10"
+  }
+]

@@ -1,16 +1,39 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api/
+const axios = require("axios");
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const talks = require("./src/data/talks.json");
+const interviews = require("./src/data/interviews.json");
+const selectedRepositories = require("./src/data/repositories.json");
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+module.exports = function(api) {
+  api.loadSource(async ({ addCollection }) => {
+    const talkCollection = addCollection({
+      typeName: "Talks"
+    });
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+    const interviewCollection = addCollection({
+      typeName: "Interviews"
+    });
+
+    const repositoryCollection = addCollection({
+      typeName: "Repositories"
+    })
+
+    for (const item of talks) {
+      talkCollection.addNode(item);
+    }
+
+    for (const item of interviews) {
+      interviewCollection.addNode(item);
+    }
+
+    const repositories = await axios(
+      "https://api.github.com/users/sarahdayan/repos"
+    );
+
+    for (const repository of repositories.data) {
+      if (selectedRepositories.includes(repository.name)) {
+        repositoryCollection.addNode(repository);
+      }
+    }
+  });
+};
