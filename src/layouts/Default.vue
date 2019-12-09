@@ -4,25 +4,25 @@
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/projects">
+      <nav>
+        <g-link class="nav-link" to="/projects">
           Projects
         </g-link>
-        <g-link class="nav__link" to="/talks">
+        <g-link class="nav-link" to="/talks">
           Talks
         </g-link>
-        <g-link class="nav__link" to="/interviews">
+        <g-link class="nav-link" to="/interviews">
           Interviews
         </g-link>
         <a
-          class="nav__link"
+          class="nav-link"
           href="https://github.com/sarahdayan/"
           rel="noopener"
           target="_blank"
           >GitHub</a
         >
         <a
-          class="nav__link"
+          class="nav-link"
           href="https://twitter.com/frontstuff_io"
           rel="noopener"
           target="_blank"
@@ -53,7 +53,7 @@ body {
 
 .layout {
   max-width: 760px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -62,11 +62,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+  margin-bottom: 40px;
 }
 
-.nav__link {
+.nav-link {
   margin-left: 20px;
 }
 </style>
