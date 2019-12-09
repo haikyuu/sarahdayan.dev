@@ -16,6 +16,13 @@
         </g-link>
         <a
           class="nav__link"
+          href="https://github.com/sarahdayan/"
+          rel="noopener"
+          target="_blank"
+          >GitHub</a
+        >
+        <a
+          class="nav__link"
           href="https://twitter.com/frontstuff_io"
           rel="noopener"
           target="_blank"
