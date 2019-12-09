@@ -6,5 +6,9 @@
 
 module.exports = {
   siteName: "Sarah Dayan",
-  plugins: []
+  plugins: [
+    {
+      use: "gridsome-plugin-typescript"
+    }
+  ]
 };

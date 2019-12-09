@@ -65,14 +65,15 @@ query {
 </page-query>
 
 <script>
-import formattedDate from "@/utils/formattedDate.js";
+import Vue from "vue";
+import { formattedDate } from "@/utils/date";
 
-export default {
+export default Vue.extend({
   metaInfo: {
     title: "Talks"
   },
   methods: {
     formattedDate
   }
-};
+});
 </script>

@@ -46,7 +46,9 @@ query {
 </page-query>
 
 <script>
-export default {
+import Vue from "vue";
+
+export default Vue.extend({
   metaInfo: {
     title: "Projects"
   },
@@ -57,5 +59,5 @@ export default {
       return formatter.format(count);
     }
   }
-};
+});
 </script>
