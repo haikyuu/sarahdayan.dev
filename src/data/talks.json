@@ -18,6 +18,10 @@
     "date": "2019-12-04",
     "links": [
       {
+        "label": "Video",
+        "link": "https://youtu.be/R50q4NES6Iw"
+      },
+      {
         "label": "Slides",
         "link": "https://noti.st/sarahdayan/pmD0XT/in-defense-of-utility-first-css"
       }
