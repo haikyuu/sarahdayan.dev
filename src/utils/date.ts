@@ -4,8 +4,12 @@ function stringToNumber(value: string) {
 
 export function formattedDate(datetime: string) {
   const timestamp = Date.UTC(
-    ...(datetime.split("-").map(stringToNumber) as [number, number, number])
+    ...(datetime.split("-").map((value: string, index: number) => {
+      let n = stringToNumber(value);
+      return index === 1 ? --n : n;
+    }) as [number, number, number])
   );
+  console.log(datetime.split("-").map(stringToNumber));
   const date = new Date(timestamp);
   const options = { year: "numeric", month: "long", day: "numeric" };
 
