@@ -9,7 +9,6 @@ export function formattedDate(datetime: string) {
       return index === 1 ? --n : n;
     }) as [number, number, number])
   );
-  console.log(datetime.split("-").map(stringToNumber));
   const date = new Date(timestamp);
   const options = { year: "numeric", month: "long", day: "numeric" };
 
