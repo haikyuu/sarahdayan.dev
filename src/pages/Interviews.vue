@@ -15,10 +15,8 @@
         <h3 itemprop="publisher">{{ node.platform }}</h3>
         <p>
           With
-          <span v-for="host in node.hosts" :key="host">
-            <span itemprop="author">{{ host }} </span>
-            <span v-if="node.guests.length">, </span>
-            <span>{{ node.guests.join(", ") }}</span>
+          <span itemprop="author">
+            {{ merge(node.hosts, node.guests).join(", ") }}
           </span>
         </p>
         <time
@@ -53,13 +51,15 @@ query {
 <script>
 import Vue from "vue";
 import { formattedDate } from "@/utils/date";
+import mergeArrays from "@/utils/mergeArrays";
 
 export default Vue.extend({
   metaInfo: {
     title: "Interviews"
   },
   methods: {
-    formattedDate
-  }
+    formattedDate,
+    merge: mergeArrays
+  },
 });
 </script>
