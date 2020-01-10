@@ -60,6 +60,6 @@ export default Vue.extend({
   methods: {
     formattedDate,
     merge: mergeArrays
-  },
+  }
 });
 </script>
