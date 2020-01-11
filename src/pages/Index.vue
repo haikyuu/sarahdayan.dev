@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <item v-for="{ id, title, description, link, type } in items" :key="id">
+    <item v-for="{ id, title, description, link, type, links } in items" :key="id">
       <p class="text-xs font-bold uppercase">Featured {{ type }}</p>
       <h2 class="text-2xl font-semibold mt-4" itemprop="name">
         <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
       </h2>
-      <p class="mt-2 mb-6">{{ description }}</p>
-      <g-link class="underline" :to="type"> See more {{ type }} </g-link>
+      <p class="mt-2">{{ description }}</p>
+      <g-link class="inline-block mt-6 underline" :to="type"> See more {{ type }} </g-link>
     </item>
   </Layout>
 </template>
@@ -18,7 +18,11 @@ query {
       node {
         id
         title
-        event
+        event,
+        links {
+          label
+          link
+        }
       }
     }
   },
@@ -63,9 +67,10 @@ export default {
         .map(type => {
           const items = this.$page[type].edges.map(
             ({
-              node: { id, title, link, description, event, hosts, guests }
+              node: { id, title, link, description, event, hosts, guests, links }
             }) => {
               let summary = "";
+              let href = link || links[0].link;
 
               if (description) {
                 summary = description;
@@ -78,7 +83,7 @@ export default {
               return {
                 id,
                 title,
-                link,
+                link: href,
                 description: summary,
                 type
               };
