@@ -16,7 +16,7 @@ module.exports = function(api) {
 
     const repositoryCollection = addCollection({
       typeName: "Repositories"
-    })
+    });
 
     for (const item of talks) {
       talkCollection.addNode(item);
