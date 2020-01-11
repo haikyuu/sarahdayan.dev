@@ -13,7 +13,7 @@
 
 <page-query>
 query {
-  talks: allTalks(filter: { featured: { eq: true }}) {
+  talks: allTalk(filter: { featured: { eq: true }}) {
     edges {
       node {
         id
@@ -26,7 +26,7 @@ query {
       }
     }
   },
-  interviews: allInterviews(filter: { featured: { eq: true }}) {
+  interviews: allInterview(filter: { featured: { eq: true }}) {
     edges {
       node {
         id
@@ -37,7 +37,7 @@ query {
       }
     }
   },
-  projects: allRepositories(filter: { featured: { eq: true }}) {
+  projects: allRepository(filter: { featured: { eq: true }}) {
     edges {
       node {
         id

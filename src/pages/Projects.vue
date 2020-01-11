@@ -17,7 +17,7 @@
 
 <page-query>
 query {
-  repositories: allRepositories {
+  repositories: allRepository {
     edges {
       node {
         id

@@ -29,7 +29,7 @@
 
 <page-query>
 query {
-  interviews: allInterviews {
+  interviews: allInterview {
     edges {
       node {
         id

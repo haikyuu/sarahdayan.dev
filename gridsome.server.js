@@ -4,18 +4,18 @@ const talks = require("./src/data/talks.json");
 const interviews = require("./src/data/interviews.json");
 const selectedRepositories = require("./src/data/repositories.json");
 
-module.exports = function(api) {
-  api.loadSource(async ({ addCollection }) => {
+module.exports = ({ loadSource }) => {
+  loadSource(async ({ addCollection }) => {
     const talkCollection = addCollection({
-      typeName: "Talks"
+      typeName: "Talk"
     });
 
     const interviewCollection = addCollection({
-      typeName: "Interviews"
+      typeName: "Interview"
     });
 
     const repositoryCollection = addCollection({
-      typeName: "Repositories"
+      typeName: "Repository"
     });
 
     for (const item of talks) {

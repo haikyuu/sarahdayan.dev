@@ -58,7 +58,7 @@
 
 <page-query>
 query {
-  talks: allTalks {
+  talks: allTalk {
     edges {
       node {
         id
