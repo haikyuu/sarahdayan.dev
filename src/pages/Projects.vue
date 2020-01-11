@@ -1,28 +1,17 @@
 <template>
   <Layout>
-    <h1>Projects</h1>
-    <p>
-      I'm often working on new things. Here are a few of my favorite projects
-      I've built.
-    </p>
-    <p>
-      You can find more on
-      <a href="https://github.com/sarahdayan/" rel="noopener" target="_blank"
-        >GitHub</a
-      >.
-    </p>
     <div v-for="{ node } in $page.repositories.edges" :key="node.id">
-      <article itemscope itemtype="http://schema.org/CreativeWork">
-        <h2 itemprop="name">
+      <article class="p-4" itemscope itemtype="http://schema.org/CreativeWork">
+        <p class="text-xs font-bold uppercase">{{ node.language }}</p>
+        <h2 class="text-3xl font-semibold mt-4" itemprop="name">
           <a :href="node.link" target="_blank" rel="noopener">{{
             node.title
           }}</a>
         </h2>
-        <p>{{ node.description }}</p>
-        <ul>
-          <li>Language: {{ node.language }}</li>
+        <p class="mt-2">{{ node.description }}</p>
+        <!-- <ul>
           <li>Stars: {{ formattedCount(node.stars) }}</li>
-        </ul>
+        </ul> -->
       </article>
     </div>
   </Layout>

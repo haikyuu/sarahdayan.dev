@@ -1,18 +1,15 @@
 <template>
   <Layout>
-    <h1>Interviews</h1>
-    <p>
-      I've been invited to participate a handful of podcasts and give a few
-      interviews.
-    </p>
     <div v-for="{ node } in $page.interviews.edges" :key="node.id">
-      <article itemscope itemtype="http://schema.org/Article">
-        <h2 itemprop="name">
+      <article class="p-4" itemscope itemtype="http://schema.org/Article">
+        <h3 class="text-xs font-bold uppercase" itemprop="publisher">
+          {{ node.platform }}
+        </h3>
+        <h2 class="text-3xl font-semibold mt-4" itemprop="name">
           <a :href="node.link" target="_blank" rel="noopener">{{
             node.title
           }}</a>
         </h2>
-        <h3 itemprop="publisher">{{ node.platform }}</h3>
         <p>
           With
           <span itemprop="author">

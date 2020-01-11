@@ -1,27 +1,35 @@
 <template>
   <Layout>
-    <h1>Talks</h1>
-    <p>
-      I've been lucky enough to speak about JavaScript, CSS and more at
-      conferences all around the world. If you want me to speak at yours, drop
-      me a line.
-    </p>
     <div v-for="{ node } in $page.talks.edges" :key="node.id">
-      <article itemscope itemtype="http://schema.org/Event">
+      <article class="p-4" itemscope itemtype="http://schema.org/Event">
         <header>
-          <h2 itemprop="name">{{ node.title }}</h2>
-          <h3 itemprop="name">{{ node.event }}</h3>
-          <div itemprop="location" itemscope itemtype="http://schema.org/Place">
-            <div
-              itemprop="address"
+          <h3 class="text-xs font-bold uppercase" itemprop="name">
+            <span>
+              {{ node.event }}
+            </span>
+            |
+            <span
+              itemprop="location"
               itemscope
-              itemtype="http://schema.org/PostalAddress"
+              itemtype="http://schema.org/Place"
             >
-              <span itemprop="addressLocality"> {{ node.location.city }} </span
-              >,
-              <span itemprop="addressCountry">{{ node.location.country }}</span>
-            </div>
-          </div>
+              <span
+                itemprop="address"
+                itemscope
+                itemtype="http://schema.org/PostalAddress"
+              >
+                <span itemprop="addressLocality">
+                  {{ node.location.city }} </span
+                >,
+                <span itemprop="addressCountry">{{
+                  node.location.country
+                }}</span>
+              </span>
+            </span>
+          </h3>
+          <h2 class="text-3xl font-semibold mt-4" itemprop="name">
+            {{ node.title }}
+          </h2>
           <time
             itemprop="startDate"
             :datetime="node.date"

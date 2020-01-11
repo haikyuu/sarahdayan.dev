@@ -1,8 +1,9 @@
 <template>
   <Layout>
+    <h2>Hello, I'm Sarah Dayan.</h2>
     <p>
-      I’m Sarah Dayan, a Sr. Software Engineer currently working as Tech Lead of
-      the Doc Squad at
+      I’m a Senior Software Engineer currently working as Tech Lead of the Doc
+      Squad at
       <a href="https://www.algolia.com/" target="_blank" rel="noopener"
         >Algolia</a
       >. I mostly do front-end development, and I’m a
