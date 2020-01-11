@@ -18,6 +18,7 @@
     "eslint-loader": "^3.0.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.0.1",
+    "gridsome-plugin-svg": "^0.0.10",
     "gridsome-plugin-tailwindcss": "^2.2.32",
     "gridsome-plugin-typescript": "^0.4.0",
     "prettier": "^1.19.1",

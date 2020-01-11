@@ -12,6 +12,12 @@ module.exports = {
     },
     {
       use: "gridsome-plugin-tailwindcss"
+    },
+    {
+      use: "gridsome-plugin-svg",
+      options: {
+        goesBothWays: true
+      }
     }
   ]
 };
