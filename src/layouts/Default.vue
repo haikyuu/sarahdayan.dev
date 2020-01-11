@@ -91,9 +91,6 @@ import TwitterIcon from "@/assets/icons/twitter.svg?inline";
 import GithubIcon from "@/assets/icons/github.svg?inline";
 
 export default Vue.extend({
-  metaInfo: {
-    title: "Projects"
-  },
   components: {
     TwitterIcon,
     GithubIcon
