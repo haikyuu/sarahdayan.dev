@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div v-for="{ node } in $page.talks.edges" :key="node.id">
-      <article class="p-4" itemscope itemtype="http://schema.org/Event">
+      <item>
         <header>
           <h3 class="text-xs font-bold uppercase" itemprop="name">
             <span>
@@ -27,24 +27,31 @@
               </span>
             </span>
           </h3>
-          <h2 class="text-3xl font-semibold mt-4" itemprop="name">
+          <h2 class="text-2xl font-semibold mt-4" itemprop="name">
             {{ node.title }}
           </h2>
           <time
+            class="inline-block mt-2"
             itemprop="startDate"
             :datetime="node.date"
             :content="node.date"
             >{{ formattedDate(node.date) }}</time
           >
         </header>
-        <footer>
-          <ul>
-            <li v-for="{ label, link } in node.links" :key="label">
-              <a :href="link" target="_blank" rel="noopener">{{ label }}</a>
+        <footer class="mt-2">
+          <ul class="flex -mx-1">
+            <li v-for="{ label, link } in node.links" :key="label" class="mx-1">
+              <a
+                class="underline"
+                :href="link"
+                target="_blank"
+                rel="noopener"
+                >{{ label }}</a
+              >
             </li>
           </ul>
         </footer>
-      </article>
+      </item>
     </div>
   </Layout>
 </template>
@@ -74,11 +81,15 @@ query {
 
 <script>
 import Vue from "vue";
+import Item from "@/components/Item.vue";
 import { formattedDate } from "@/utils/date";
 
 export default Vue.extend({
   metaInfo: {
     title: "Talks"
+  },
+  components: {
+    Item
   },
   methods: {
     formattedDate

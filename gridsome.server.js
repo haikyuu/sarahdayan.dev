@@ -31,8 +31,15 @@ module.exports = function(api) {
     );
 
     for (const repository of repositories.data) {
-      if (selectedRepositories.includes(repository.name)) {
-        repositoryCollection.addNode(repository);
+      const item = selectedRepositories.find(
+        ({ name }) => name === repository.name
+      );
+      if (item) {
+        const enhancedRepository = {
+          ...repository,
+          featured: item.featured
+        };
+        repositoryCollection.addNode(enhancedRepository);
       }
     }
   });

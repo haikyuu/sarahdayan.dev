@@ -1,6 +1,8 @@
 <template>
   <div class="md:flex-row flex-col flex relative">
-    <div class="md:fixed static flex flex-col justify-between md:w-1/2 md:h-screen p-12">
+    <div
+      class="md:fixed static flex flex-col justify-between md:w-1/2 md:h-screen p-12"
+    >
       <div>
         <div>
           <h1 class="text-5xl font-bold">Hello, I'm Sarah Dayan.</h1>

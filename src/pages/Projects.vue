@@ -1,18 +1,16 @@
 <template>
   <Layout>
     <div v-for="{ node } in $page.repositories.edges" :key="node.id">
-      <article class="p-4" itemscope itemtype="http://schema.org/CreativeWork">
-        <p class="text-xs font-bold uppercase">{{ node.language }}</p>
-        <h2 class="text-3xl font-semibold mt-4" itemprop="name">
-          <a :href="node.link" target="_blank" rel="noopener">{{
-            node.title
-          }}</a>
-        </h2>
-        <p class="mt-2">{{ node.description }}</p>
-        <!-- <ul>
-          <li>Stars: {{ formattedCount(node.stars) }}</li>
-        </ul> -->
-      </article>
+      <item>
+        <a :href="node.link" target="_blank" rel="noopener">
+          <p class="text-xs font-bold uppercase">{{ node.language }}</p>
+          <h2 class="text-2xl font-semibold mt-4" itemprop="name">
+            {{ node.title }}
+          </h2>
+          <p class="mt-2">{{ node.description }}</p>
+          <p>{{ formattedCount(node.stars) }} stars</p>
+        </a>
+      </item>
     </div>
   </Layout>
 </template>
@@ -36,17 +34,18 @@ query {
 
 <script>
 import Vue from "vue";
+import Item from "@/components/Item.vue";
+import { formattedCount } from "@/utils/count";
 
 export default Vue.extend({
   metaInfo: {
     title: "Projects"
   },
+  components: {
+    Item
+  },
   methods: {
-    formattedCount(count) {
-      const formatter = new Intl.NumberFormat("en-US");
-
-      return formatter.format(count);
-    }
+    formattedCount
   }
 });
 </script>

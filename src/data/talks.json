@@ -6,6 +6,7 @@
       "city": "Austin, TX",
       "country": "USA"
     },
+    "featured": false,
     "date": "2020-03-02"
   },
   {
@@ -15,6 +16,7 @@
       "city": "Paris",
       "country": "France"
     },
+    "featured": false,
     "date": "2019-12-04",
     "links": [
       {
@@ -34,6 +36,7 @@
       "city": "Toronto",
       "country": "Canada"
     },
+    "featured": true,
     "date": "2019-11-11",
     "links": [
       {
@@ -49,6 +52,7 @@
       "city": "Paris",
       "country": "France"
     },
+    "featured": false,
     "date": "2019-06-05",
     "links": [
       {
@@ -64,6 +68,7 @@
       "city": "Paris",
       "country": "France"
     },
+    "featured": false,
     "date": "2019-05-28",
     "links": [
       {
@@ -79,6 +84,7 @@
       "city": "Paris",
       "country": "France"
     },
+    "featured": false,
     "date": "2019-01-15",
     "links": [
       {
