@@ -3,7 +3,7 @@
     <div
       class="md:fixed static flex flex-col justify-between md:w-1/2 md:h-screen p-12"
     >
-      <div>
+      <div class="flex flex-col">
         <div>
           <h1 class="text-5xl font-bold">Hello, I'm Sarah Dayan.</h1>
           <p class="mt-4">
@@ -26,19 +26,21 @@
             >, a multi-environment JavaScript library to handle monetary values.
           </p>
         </div>
-        <nav class="text-xs font-bold uppercase mt-12">
-          <ul class="-my-3">
-            <li class="my-3">
+        <nav
+          class="text-xs font-bold uppercase md:mt-12 mb-6 md:mb-0 order-first md:order-none"
+        >
+          <ul class="flex flex-row md:flex-col md:-my-1 -mx-2 md:-mx-0">
+            <li class="md:my-1 mx-2">
               <g-link to="/projects">
                 Projects
               </g-link>
             </li>
-            <li class="my-3">
+            <li class="md:my-1 mx-2">
               <g-link to="/talks">
                 Talks
               </g-link>
             </li>
-            <li class="my-3">
+            <li class="md:my-1 mx-2">
               <g-link to="/interviews">
                 Interviews
               </g-link>
@@ -73,7 +75,7 @@
         </li>
       </ul>
     </div>
-    <div class="md:absolute static md:right-0 md:w-1/2 p-12">
+    <div class="md:absolute static md:right-0 md:w-1/2 md:p-12 p-8">
       <slot />
     </div>
   </div>
