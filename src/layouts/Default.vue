@@ -44,7 +44,7 @@
           </ul>
         </nav>
       </div>
-      <ul class="w-full flex -mx-6">
+      <ul class="w-full flex mt-12 -mx-6">
         <li class="mx-6">
           <a
             class="flex"
