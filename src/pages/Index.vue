@@ -2,7 +2,7 @@
   <Layout>
     <item v-for="{ id, title, description, link, type, links } in items" :key="id">
       <p class="text-xs font-bold uppercase">Featured {{ type }}</p>
-      <h2 class="text-2xl font-semibold mt-4" itemprop="name">
+      <h2 class="text-2xl font-semibold mt-4" :class="{ capitalize: type === 'projects' }" itemprop="name">
         <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
       </h2>
       <p class="mt-2">{{ description }}</p>

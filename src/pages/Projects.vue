@@ -4,7 +4,7 @@
       <item>
         <a :href="node.link" target="_blank" rel="noopener">
           <p class="text-xs font-bold uppercase">{{ node.language }}</p>
-          <h2 class="text-2xl font-semibold mt-4" itemprop="name">
+          <h2 class="text-2xl capitalize font-semibold mt-4" itemprop="name">
             {{ node.title }}
           </h2>
           <p class="mt-2">{{ node.description }}</p>
