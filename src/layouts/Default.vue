@@ -5,7 +5,7 @@
     >
       <div class="flex flex-col">
         <div>
-          <h1 class="text-5xl font-bold">Hello, I'm Sarah Dayan.</h1>
+          <h1 class="text-4xl md:text-5xl font-bold">Hello, I'm Sarah Dayan.</h1>
           <p class="mt-4">
             I’m a Senior Software Engineer currently working as Tech Lead of the
             Doc Squad at
@@ -27,7 +27,7 @@
           </p>
         </div>
         <nav
-          class="text-xs font-bold uppercase md:mt-12 mb-6 md:mb-0 order-first md:order-none"
+          class="text-sm tracking-wider font-bold uppercase md:mt-12 mb-6 md:mb-0 order-first md:order-none"
         >
           <ul class="flex flex-row md:flex-col md:-my-1 -mx-2 md:-mx-0">
             <li class="md:my-1 mx-2">
