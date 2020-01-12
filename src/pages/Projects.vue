@@ -1,17 +1,22 @@
 <template>
   <Layout>
-    <div v-for="{ node } in $page.repositories.edges" :key="node.id">
-      <item>
+    <list :items="$page.repositories.edges">
+      <template v-slot:item="{ item: { node } }">
         <a :href="node.link" target="_blank" rel="noopener">
-          <p class="text-xs font-bold uppercase">{{ node.language }}</p>
-          <h2 class="text-2xl capitalize font-semibold mt-4" itemprop="name">
+          <p class="text-xs text-twilight font-bold uppercase">
+            {{ node.language }}
+          </p>
+          <h2
+            class="text-2xl text-twilight capitalize font-semibold mt-4"
+            itemprop="name"
+          >
             {{ node.title }}
           </h2>
           <p class="mt-2">{{ node.description }}</p>
           <p>{{ formattedCount(node.stars) }} stars</p>
         </a>
-      </item>
-    </div>
+      </template>
+    </list>
   </Layout>
 </template>
 
@@ -34,7 +39,7 @@ query {
 
 <script>
 import Vue from "vue";
-import Item from "@/components/Item.vue";
+import List from "@/components/List.vue";
 import { formattedCount } from "@/utils/count";
 
 export default Vue.extend({
@@ -42,7 +47,7 @@ export default Vue.extend({
     title: "Projects"
   },
   components: {
-    Item
+    List
   },
   methods: {
     formattedCount

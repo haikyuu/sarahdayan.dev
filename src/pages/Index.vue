@@ -1,13 +1,23 @@
 <template>
   <Layout>
-    <item v-for="{ id, title, description, link, type, links } in items" :key="id">
-      <p class="text-xs font-bold uppercase">Featured {{ type }}</p>
-      <h2 class="text-2xl font-semibold mt-4" :class="{ capitalize: type === 'projects' }" itemprop="name">
-        <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
-      </h2>
-      <p class="mt-2">{{ description }}</p>
-      <g-link class="inline-block mt-6 underline" :to="type"> See more {{ type }} </g-link>
-    </item>
+    <list :items="items">
+      <template v-slot:item="{ item: { id, title, description, link, type } }">
+        <p class="text-xs text-twilight font-bold uppercase">
+          Featured {{ type }}
+        </p>
+        <h2
+          class="text-2xl text-twilight font-semibold mt-4"
+          :class="{ capitalize: type === 'projects' }"
+          itemprop="name"
+        >
+          <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
+        </h2>
+        <p class="mt-2">{{ description }}</p>
+        <g-link class="inline-block mt-6 text-twilight underline" :to="type">
+          See more {{ type }}
+        </g-link>
+      </template>
+    </list>
   </Layout>
 </template>
 
@@ -51,7 +61,7 @@ query {
 </page-query>
 
 <script>
-import Item from "@/components/Item.vue";
+import List from "@/components/List.vue";
 import mergeArrays from "@/utils/mergeArrays";
 
 export default {
@@ -59,7 +69,7 @@ export default {
     title: "Home"
   },
   components: {
-    Item
+    List
   },
   computed: {
     items() {
@@ -67,7 +77,16 @@ export default {
         .map(type => {
           const items = this.$page[type].edges.map(
             ({
-              node: { id, title, link, description, event, hosts, guests, links }
+              node: {
+                id,
+                title,
+                link,
+                description,
+                event,
+                hosts,
+                guests,
+                links
+              }
             }) => {
               let summary = "";
               let href = link || links[0].link;

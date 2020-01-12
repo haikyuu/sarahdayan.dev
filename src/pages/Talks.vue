@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <div v-for="{ node } in $page.talks.edges" :key="node.id">
-      <item>
+    <list :items="$page.talks.edges">
+      <template v-slot:item="{ item: { node } }">
         <header>
-          <h3 class="text-xs font-bold uppercase" itemprop="name">
+          <h3 class="text-xs text-twilight font-bold uppercase" itemprop="name">
             <span>
               {{ node.event }}
             </span>
@@ -27,7 +27,7 @@
               </span>
             </span>
           </h3>
-          <h2 class="text-2xl font-semibold mt-4" itemprop="name">
+          <h2 class="text-2xl text-twilight font-semibold mt-4" itemprop="name">
             {{ node.title }}
           </h2>
           <time
@@ -42,7 +42,7 @@
           <ul class="flex -mx-1">
             <li v-for="{ label, link } in node.links" :key="label" class="mx-1">
               <a
-                class="underline"
+                class="underline text-twilight"
                 :href="link"
                 target="_blank"
                 rel="noopener"
@@ -51,8 +51,8 @@
             </li>
           </ul>
         </footer>
-      </item>
-    </div>
+      </template>
+    </list>
   </Layout>
 </template>
 
@@ -81,7 +81,7 @@ query {
 
 <script>
 import Vue from "vue";
-import Item from "@/components/Item.vue";
+import List from "@/components/List.vue";
 import { formattedDate } from "@/utils/date";
 
 export default Vue.extend({
@@ -89,7 +89,7 @@ export default Vue.extend({
     title: "Talks"
   },
   components: {
-    Item
+    List
   },
   methods: {
     formattedDate
