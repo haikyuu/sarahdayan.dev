@@ -3,11 +3,11 @@
     <list :items="$page.repositories.edges">
       <template v-slot:item="{ item: { node } }">
         <a :href="node.link" target="_blank" rel="noopener">
-          <p class="text-xs text-twilight font-bold uppercase">
+          <p class="text-xs font-bold uppercase text-twilight">
             {{ node.language }}
           </p>
           <h2
-            class="text-2xl text-twilight capitalize font-semibold mt-4"
+            class="mt-4 text-2xl font-semibold capitalize text-twilight"
             itemprop="name"
           >
             {{ node.title }}

@@ -2,18 +2,18 @@
   <Layout>
     <list :items="items">
       <template v-slot:item="{ item: { id, title, description, link, type } }">
-        <p class="text-xs text-twilight font-bold uppercase">
+        <p class="text-xs font-bold uppercase text-twilight">
           Featured {{ type }}
         </p>
         <h2
-          class="text-2xl text-twilight font-semibold mt-4"
+          class="mt-4 text-2xl font-semibold text-twilight"
           :class="{ capitalize: type === 'projects' }"
           itemprop="name"
         >
           <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
         </h2>
         <p class="mt-2">{{ description }}</p>
-        <g-link class="inline-block mt-6 text-twilight underline" :to="type">
+        <g-link class="inline-block mt-6 underline text-twilight" :to="type">
           See more {{ type }}
         </g-link>
       </template>

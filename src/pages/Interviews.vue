@@ -4,12 +4,12 @@
       <template v-slot:item="{ item: { node } }">
         <a :href="node.link" target="_blank" rel="noopener">
           <h3
-            class="text-xs text-twilight font-bold uppercase"
+            class="text-xs font-bold uppercase text-twilight"
             itemprop="publisher"
           >
             {{ node.platform }}
           </h3>
-          <h2 class="text-2xl text-twilight font-semibold mt-4" itemprop="name">
+          <h2 class="mt-4 text-2xl font-semibold text-twilight" itemprop="name">
             {{ node.title }}
           </h2>
           <p class="mt-2">

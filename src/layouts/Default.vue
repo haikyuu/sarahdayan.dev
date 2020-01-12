@@ -1,11 +1,11 @@
 <template>
-  <div class="text-oslo md:flex-row flex-col flex relative">
+  <div class="relative flex flex-col text-oslo md:flex-row">
     <div
-      class="md:fixed static flex flex-col justify-between md:w-1/2 md:h-screen pt-20 pb-10 md:pb-20 pl-20 md:pr-10 pr-20"
+      class="static flex flex-col justify-between pt-20 pb-10 pl-20 pr-20 md:fixed md:w-1/2 md:h-screen md:pb-20 md:pr-10"
     >
       <div class="flex flex-col">
         <div>
-          <h1 class="text-twilight text-4xl lg:text-5xl font-bold">
+          <h1 class="text-4xl font-bold text-twilight lg:text-5xl">
             Hello, I'm Sarah Dayan.
           </h1>
           <div class="leading-loose">
@@ -13,14 +13,14 @@
               I’m a Senior Software Engineer currently working as Tech Lead of the
               Doc Squad at
               <a
-                class="text-twilight underline"
+                class="underline text-twilight"
                 href="https://www.algolia.com/"
                 target="_blank"
                 rel="noopener"
                 >Algolia</a
               >. I mostly do front-end development, and I’m a
               <a
-                class="text-twilight underline"
+                class="underline text-twilight"
                 href="https://vuejs.org/"
                 rel="noopener"
                 >Vue.js</a
@@ -28,7 +28,7 @@
               and CSS nerd. I can't shut up about test-driven development and
               utility-first CSS. I also share what I learn on my blog
               <a
-                class="text-twilight underline"
+                class="underline text-twilight"
                 href="http://frontstuff.io"
                 target="_blank"
                 rel="noopener"
@@ -38,7 +38,7 @@
             <p class="mt-4">
               Among other things, I created
               <a
-                class="text-twilight underline"
+                class="underline text-twilight"
                 href="https://github.com/sarahdayan/dinero.js"
                 rel="noopener"
                 >Dinero.js</a
@@ -47,10 +47,10 @@
           </div>
         </div>
         <nav
-          class="text-sm tracking-wider font-bold uppercase md:mt-12 mb-6 md:mb-0 order-first md:order-none"
+          class="order-first mb-6 text-sm font-bold tracking-wider uppercase md:mt-12 md:mb-0 md:order-none"
         >
-          <ul class="flex flex-row md:flex-col md:-my-1 -mx-2 md:-mx-0">
-            <li class="md:my-1 mx-2">
+          <ul class="flex flex-row -mx-2 md:flex-col md:-my-1 md:-mx-0">
+            <li class="mx-2 md:my-1">
               <g-link
                 class="hover:text-twilight transition"
                 active-class="text-twilight"
@@ -59,7 +59,7 @@
                 Projects
               </g-link>
             </li>
-            <li class="md:my-1 mx-2">
+            <li class="mx-2 md:my-1">
               <g-link
                 class="hover:text-twilight transition"
                 active-class="text-twilight"
@@ -68,7 +68,7 @@
                 Talks
               </g-link>
             </li>
-            <li class="md:my-1 mx-2">
+            <li class="mx-2 md:my-1">
               <g-link
                 class="hover:text-twilight transition"
                 active-class="text-twilight"
@@ -80,7 +80,7 @@
           </ul>
         </nav>
       </div>
-      <ul class="w-full flex mt-12 -mx-6 text-twilight text-sm">
+      <ul class="flex w-full mt-12 -mx-6 text-sm text-twilight">
         <li class="mx-6">
           <a
             class="flex"
@@ -109,7 +109,7 @@
     </div>
     <transition name="fade" appear>
       <div
-        class="md:absolute static md:right-0 md:w-1/2 md:py-20 md:pr-20 md:pl-10 p-12"
+        class="static p-12 md:absolute md:right-0 md:w-1/2 md:py-20 md:pr-20 md:pl-10"
       >
         <slot />
       </div>
