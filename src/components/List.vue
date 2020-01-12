@@ -7,8 +7,8 @@
     >
       <slot name="item" :item="item" />
     </item>
-    <div class="fixed bottom-0 w-full h-20 gradient-y-transparent-woodsmoke" />
-    <div class="fixed top-0 w-full h-20 gradient-y-woodsmoke-transparent" />
+    <div class="fixed left-0 bottom-0 w-full h-20 gradient-y-transparent-woodsmoke" />
+    <div class="fixed left-0 top-0 w-full h-20 gradient-y-woodsmoke-transparent" />
   </div>
 </template>
 
