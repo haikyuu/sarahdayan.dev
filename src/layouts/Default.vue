@@ -1,7 +1,7 @@
 <template>
   <div class="relative flex flex-col text-oslo md:flex-row">
     <div
-      class="static flex flex-col justify-between pt-20 pb-10 pl-20 pr-20 md:fixed md:w-1/2 md:h-screen md:pb-20 md:pr-10"
+      class="static flex flex-col justify-between pt-10 pb-10 pl-10 pr-10 lg:pt-20 lg:pl-20 lg:pr-20 md:fixed md:w-1/2 md:h-screen lg:pb-20 lg:pr-10"
     >
       <div class="flex flex-col">
         <div>
@@ -109,11 +109,13 @@
     </div>
     <transition name="fade" appear>
       <div
-        class="static p-12 md:absolute md:right-0 md:w-1/2 md:py-20 md:pr-20 md:pl-10"
+        class="static p-10 md:absolute md:right-0 md:w-1/2 lg:py-20 lg:pr-20 lg:pl-10"
       >
         <slot />
       </div>
     </transition>
+    <div class="fixed bottom-0 left-0 w-full h-10 pointer-events-none lg:h-20 gradient-y-transparent-woodsmoke" />
+    <div class="fixed top-0 left-0 w-full h-10 pointer-events-none lg:h-20 gradient-y-woodsmoke-transparent" />
   </div>
 </template>
 

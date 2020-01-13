@@ -1,5 +1,5 @@
 <template>
-  <div class="relative -my-2 group">
+  <div class="-my-2 group">
     <item
       v-for="item in items"
       :key="item.id"
@@ -7,8 +7,6 @@
     >
       <slot name="item" :item="item" />
     </item>
-    <div class="fixed bottom-0 left-0 w-full h-20 gradient-y-transparent-woodsmoke" />
-    <div class="fixed top-0 left-0 w-full h-20 gradient-y-woodsmoke-transparent" />
   </div>
 </template>
 
