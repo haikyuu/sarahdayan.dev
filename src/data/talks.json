@@ -40,6 +40,10 @@
     "date": "2019-11-11",
     "links": [
       {
+        "label": "Video",
+        "link": "https://www.youtube.com/watch?v=DD1fEhcEzY8"
+      },
+      {
         "label": "Slides",
         "link": "https://noti.st/sarahdayan/S5voPs/test-driven-development-with-vue-js"
       }
