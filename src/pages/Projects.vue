@@ -1,5 +1,11 @@
 <template>
   <Layout>
+    <template v-slot:intro>
+      <p class="mt-4">
+        I'm often working on new things. Here are a few of my favorite projects
+        among the things I've built.
+      </p>
+    </template>
     <list :items="$page.repositories.edges">
       <template v-slot:item="{ item: { node } }">
         <a :href="node.link" target="_blank" rel="noopener">

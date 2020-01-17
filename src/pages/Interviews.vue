@@ -1,5 +1,11 @@
 <template>
   <Layout>
+    <template v-slot:intro>
+      <p class="mt-4">
+        I've been invited to participate a handful of podcasts and give a few
+        interviews.
+      </p>
+    </template>
     <list :items="$page.interviews.edges">
       <template v-slot:item="{ item: { node } }">
         <a :href="node.link" target="_blank" rel="noopener">

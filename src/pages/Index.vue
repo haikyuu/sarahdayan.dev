@@ -1,5 +1,8 @@
 <template>
   <Layout>
+    <template v-slot:intro>
+      <intro />
+    </template>
     <list :items="items">
       <template v-slot:item="{ item: { id, title, description, link, type } }">
         <p class="text-xs font-bold uppercase text-twilight">
@@ -61,6 +64,7 @@ query {
 </page-query>
 
 <script>
+import Intro from "@/partials/Intro.vue";
 import List from "@/components/List.vue";
 import mergeArrays from "@/utils/mergeArrays";
 
@@ -69,6 +73,7 @@ export default {
     title: "Home"
   },
   components: {
+    Intro,
     List
   },
   computed: {

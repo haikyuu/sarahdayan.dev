@@ -1,5 +1,18 @@
 <template>
   <Layout>
+    <template v-slot:intro>
+      <p class="mt-4">
+        I've been lucky enough to speak about JavaScript, CSS and more at
+        conferences all around the world. If you want me to speak at yours,
+        <a
+          class="underline text-twilight"
+          href="https://twitter.com/frontstuff_io"
+          rel="noopener"
+          target="_blank"
+          >drop me a line</a
+        >.
+      </p>
+    </template>
     <list :items="$page.talks.edges">
       <template v-slot:item="{ item: { node } }">
         <header>
