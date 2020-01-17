@@ -1,14 +1,14 @@
 <template>
   <div class="relative flex flex-col text-oslo md:flex-row">
     <div
-      class="static flex flex-col justify-between pt-10 pb-10 pl-10 pr-10 lg:pt-20 lg:pl-20 lg:pr-20 md:fixed md:w-1/2 md:h-screen lg:pb-20 lg:pr-10"
+      class="static flex flex-col justify-between pt-10 pl-10 pr-10 lg:pt-20 lg:pl-20 lg:pr-20 md:fixed md:w-1/2 md:h-screen lg:pb-20 lg:pr-10"
     >
       <div class="flex flex-col">
         <div>
-          <h1 class="text-4xl font-bold text-twilight lg:text-5xl">
+          <h1 class="text-3xl font-bold text-twilight lg:text-5xl">
             Hello, I'm Sarah Dayan.
           </h1>
-          <div class="leading-loose">
+          <div class="leading-relaxed md:leading-loose">
             <p class="mt-4">
               I’m a Senior Software Engineer currently working as Tech Lead of the
               Doc Squad at
@@ -80,7 +80,7 @@
           </ul>
         </nav>
       </div>
-      <ul class="flex w-full mt-12 -mx-6 text-sm text-twilight">
+      <ul class="flex w-full mt-10 -mx-6 text-sm md:mt-12 text-twilight">
         <li class="mx-6">
           <a
             class="flex"
