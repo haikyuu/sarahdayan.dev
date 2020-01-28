@@ -8,7 +8,10 @@
     "lint": "eslint 'src/**/*.{vue,js}' --fix"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "vue-observe-visibility": "^0.4.6",
+    "vue-resize-directive": "^1.2.0",
+    "vue2-smooth-scroll": "^1.2.0"
   },
   "devDependencies": {
     "axios": "^0.19.0",
@@ -21,6 +24,8 @@
     "gridsome-plugin-svg": "^0.0.10",
     "gridsome-plugin-tailwindcss": "^2.2.32",
     "gridsome-plugin-typescript": "^0.4.0",
+    "hex-to-rgb": "^1.0.1",
+    "postcss-selector-parser": "^6.0.2",
     "prettier": "^1.19.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.3"

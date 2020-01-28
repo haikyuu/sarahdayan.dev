@@ -1,62 +1,88 @@
 <template>
   <Layout>
-    <template v-slot:intro>
-      <intro />
-    </template>
-    <list :items="items">
-      <template v-slot:item="{ item: { id, title, description, link, type } }">
-        <p class="text-xs font-bold uppercase text-twilight">
-          Featured {{ type }}
-        </p>
-        <h2
-          class="mt-4 text-2xl font-semibold text-twilight"
-          :class="{ capitalize: type === 'projects' }"
-          itemprop="name"
-        >
-          <a :href="link" target="_blank" rel="noopener">{{ title }}</a>
-        </h2>
-        <p class="mt-2">{{ description }}</p>
-        <g-link class="inline-block mt-6 underline text-twilight" :to="type">
-          See more {{ type }}
-        </g-link>
-      </template>
-    </list>
+    <ClientOnly>
+      <div
+        id="projects"
+        v-observe-visibility="onVisibilityChange(0)"
+        class="md:pt-88 md:-mt-96"
+      >
+        <all-projects :items="$page.repositories.edges" />
+      </div>
+      <div
+        id="talks"
+        v-observe-visibility="onVisibilityChange(1)"
+        class="pt-80 md:pt-88"
+      >
+        <all-talks :items="$page.talks.edges" />
+      </div>
+      <div
+        id="interviews"
+        v-observe-visibility="onVisibilityChange(2)"
+        class="mb-48 pt-80 md:pt-8"
+      >
+        <all-interviews class="md:mt-72" :items="$page.interviews.edges" />
+      </div>
+      <p
+        v-observe-visibility="showDesignerLine"
+        :class="[shouldShowDesignerLine ? 'opacity-75' : 'opacity-0 shift-y-16']"
+        class="text-sm mt-104 ml-104 md:ml-160 transition"
+      >
+        Design by
+        <a
+          class="text-sunrise hover:text-zenith transition hover:underline"
+          href="https://dribbble.com/NicolasMzrd"
+          target="_blank"
+          rel="noopener"
+          >Nicolas Meuzard</a
+        >.
+      </p>
+    </ClientOnly>
   </Layout>
 </template>
 
 <page-query>
 query {
-  talks: allTalk(filter: { featured: { eq: true }}) {
+  repositories: allRepository(sortBy: "stargazers_count", order: DESC) {
+    edges {
+      node {
+        id
+        title: name
+        description
+        link: html_url
+        language
+        stars: stargazers_count
+      }
+    }
+  }
+  talks: allTalk {
     edges {
       node {
         id
         title
-        event,
+        event
+        location {
+          city
+          country
+        }
+        date
         links {
           label
           link
         }
       }
     }
-  },
-  interviews: allInterview(filter: { featured: { eq: true }}) {
+  }
+  interviews: allInterview {
     edges {
       node {
         id
         title
         link
+        platform
         hosts
         guests
-      }
-    }
-  },
-  projects: allRepository(filter: { featured: { eq: true }}) {
-    edges {
-      node {
-        id
-        title: name
-        link: html_url
-        description
+        date
+        type
       }
     }
   }
@@ -64,63 +90,72 @@ query {
 </page-query>
 
 <script>
-import Intro from "@/partials/Intro.vue";
-import List from "@/components/List.vue";
-import mergeArrays from "@/utils/mergeArrays";
+import Vue from "vue";
 
-export default {
-  metaInfo: {
-    title: "Home"
-  },
+import { bus } from "@/main";
+
+import AllProjects from "@/partials/AllProjects";
+import AllTalks from "@/partials/AllTalks";
+import AllInterviews from "@/partials/AllInterviews";
+
+export default Vue.extend({
   components: {
-    Intro,
-    List
+    AllProjects,
+    AllTalks,
+    AllInterviews
+  },
+  data() {
+    return {
+      scrollPosition: 0,
+      ticking: false,
+      visibleSections: [],
+      shouldShowDesignerLine: false
+    };
   },
   computed: {
-    items() {
-      return Object.keys(this.$page)
-        .map(type => {
-          const items = this.$page[type].edges.map(
-            ({
-              node: {
-                id,
-                title,
-                link,
-                description,
-                event,
-                hosts,
-                guests,
-                links
-              }
-            }) => {
-              let summary = "";
-              let href = link || links[0].link;
+    scroll() {
+      return 0.05 * this.scrollPosition;
+    }
+  },
+  created() {
+    if (process.isClient) {
+      window.addEventListener("scroll", () => {
+        if (!this.ticking) {
+          window.requestAnimationFrame(() => {
+            this.scrollPosition = parseInt(window.scrollY);
+            this.ticking = false;
+          });
 
-              if (description) {
-                summary = description;
-              } else if (event) {
-                summary = event;
-              } else if (hosts || guests) {
-                summary = `With ${mergeArrays(hosts, guests).join(", ")}`;
-              }
-
-              return {
-                id,
-                title,
-                link: href,
-                description: summary,
-                type
-              };
-            }
-          );
-
-          return items;
-        })
-        .flat();
+          this.ticking = true;
+        }
+      });
     }
   },
   methods: {
-    merge: mergeArrays
+    onVisibilityChange(index) {
+      return {
+        callback: isVisible => {
+          if (isVisible) {
+            this.visibleSections.push(index);
+          } else {
+            this.visibleSections = this.visibleSections.filter(item => {
+              return item !== index;
+            });
+          }
+
+          this.visibleSections.sort();
+
+          bus.$emit("update:scrollspy", this.visibleSections[0]);
+        },
+        intersection: {
+          threshold: 0.3
+        },
+        throttle: 300
+      };
+    },
+    showDesignerLine(isVisible) {
+      this.shouldShowDesignerLine = isVisible;
+    }
   }
-};
+});
 </script>

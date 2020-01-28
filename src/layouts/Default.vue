@@ -1,95 +1,65 @@
 <template>
-  <div class="relative flex flex-col text-oslo md:flex-row">
+  <div
+    v-resize:debounce="onResize"
+    class="relative flex flex-col w-screen mx-auto font-sans text-base max-w-1440 text-dawn md:flex-row"
+  >
     <div
-      class="static flex flex-col justify-between pt-10 pl-10 pr-10 lg:pt-20 lg:pl-20 lg:pr-20 md:fixed md:w-1/2 md:h-screen lg:pb-20 lg:pr-10"
+      class="static flex flex-col justify-between w-full p-32 md:max-w-408 lg:max-w-496 md:fixed md:h-screen lg:py-88 lg:pl-88 md:pr-0"
     >
       <div class="flex flex-col">
         <div>
-          <h1 class="text-3xl font-bold text-twilight lg:text-5xl">
-            <g-link to="/">Hello, I'm Sarah Dayan.</g-link>
+          <h1
+            class="text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-zenith"
+          >
+            Hello, I’m Sarah Dayan.
           </h1>
-          <div class="leading-relaxed md:leading-loose">
-            <div class="hidden md:block">
-              <intro />
-            </div>
-            <div class="md:hidden">
-              <slot name="intro" />
-            </div>
+          <div class="leading-loose">
+            <p class="mt-32">
+              I’m a Senior Software Engineer currently working as Tech Lead of
+              the Doc Squad at
+              <a
+                class="underline text-zenith"
+                href="https://www.algolia.com/"
+                target="_blank"
+                rel="noopener"
+                >Algolia</a
+              >. I mostly do front-end development, and I’m a
+              <a
+                class="underline text-zenith"
+                href="https://vuejs.org/"
+                rel="noopener"
+                >Vue.js</a
+              >
+              and CSS nerd. I can't shut up about test-driven development and
+              utility-first CSS. I also share what I learn on my blog
+              <a
+                class="underline text-zenith"
+                href="http://frontstuff.io"
+                target="_blank"
+                rel="noopener"
+                >frontstuff.io</a
+              >, or at meetups and conferences.
+            </p>
           </div>
         </div>
-        <nav
-          class="order-first mb-6 text-sm font-bold tracking-wider uppercase md:mt-12 md:mb-0 md:order-none"
-        >
-          <ul class="flex flex-row -mx-2 md:flex-col md:-my-1 md:-mx-0">
-            <li class="mx-2 md:my-1">
-              <g-link
-                class="hover:text-twilight transition"
-                active-class="text-twilight"
-                to="/projects"
-              >
-                Projects
-              </g-link>
-            </li>
-            <li class="mx-2 md:my-1">
-              <g-link
-                class="hover:text-twilight transition"
-                active-class="text-twilight"
-                to="/talks"
-              >
-                Talks
-              </g-link>
-            </li>
-            <li class="mx-2 md:my-1">
-              <g-link
-                class="hover:text-twilight transition"
-                active-class="text-twilight"
-                to="/interviews"
-              >
-                Interviews
-              </g-link>
-            </li>
-          </ul>
-        </nav>
+        <scroll-spy
+          class="hidden mt-72 md:block"
+          :active="active"
+          :items="items"
+        />
       </div>
-      <ul class="flex w-full mt-10 -mx-6 text-sm md:mt-12 text-twilight">
-        <li class="mx-6">
-          <a
-            class="flex"
-            href="https://twitter.com/frontstuff_io"
-            rel="noopener"
-            target="_blank"
-          >
-            <twitter-icon class="w-4 mr-2 fill-current" />
-            <span>Twitter</span>
-          </a>
-        </li>
-        <li class="mx-6">
-          <a
-            class="flex"
-            href="https://github.com/sarahdayan/"
-            rel="noopener"
-            target="_blank"
-          >
-            <github-icon class="w-4 mr-2 fill-current" />
-            <span>
-              GitHub
-            </span>
-          </a>
-        </li>
-      </ul>
+      <social-links class="w-full mt-32 md:mt-72" />
     </div>
-    <transition name="fade" appear>
-      <div
-        class="static p-10 md:absolute md:right-0 md:w-1/2 lg:py-20 lg:pr-20 lg:pl-10"
-      >
-        <slot />
-      </div>
-    </transition>
     <div
-      class="fixed bottom-0 left-0 w-full h-10 pointer-events-none lg:h-20 gradient-y-transparent-woodsmoke"
+      class="static p-32 md:max-w-536 lg:max-w-736 md:absolute md:right-0 lg:py-88 lg:pr-88 md:pl-0"
+    >
+      <slot />
+    </div>
+    <div
+      class="fixed bottom-0 left-0 hidden w-full h-32 pointer-events-none md:block gradient-y-transparent-night"
     />
     <div
-      class="fixed top-0 left-0 w-full h-10 pointer-events-none lg:h-20 gradient-y-woodsmoke-transparent"
+      class="fixed top-0 left-0 hidden w-full h-32 pointer-events-none md:block gradient-y-night-transparent"
     />
   </div>
 </template>
@@ -104,37 +74,41 @@ query {
 
 <script>
 import Vue from "vue";
-import Intro from "@/partials/Intro.vue";
-import TwitterIcon from "@/assets/icons/twitter.svg?inline";
-import GithubIcon from "@/assets/icons/github.svg?inline";
+
+import { bus } from "@/main";
+
+import ScrollSpy from "@/partials/ScrollSpy";
+import SocialLinks from "@/partials/SocialLinks";
 
 export default Vue.extend({
   metaInfo: {
     bodyAttrs: {
-      class: "bg-woodsmoke"
+      class: "bg-night overflow-x-hidden"
     }
   },
   components: {
-    Intro,
-    TwitterIcon,
-    GithubIcon
+    ScrollSpy,
+    SocialLinks
+  },
+  data() {
+    return {
+      items: [
+        { label: "Projects", link: "#projects" },
+        { label: "Talks", link: "#talks" },
+        { label: "Interviews", link: "#interviews" }
+      ],
+      active: 0
+    };
+  },
+  created() {
+    bus.$on("update:scrollspy", index => {
+      this.active = index || 0;
+    });
   },
   methods: {
-    formattedCount(count) {
-      const formatter = new Intl.NumberFormat("en-US");
-
-      return formatter.format(count);
+    onResize({ offsetWidth }) {
+      bus.$emit("resize:window", offsetWidth);
     }
   }
 });
 </script>
-
-<style>
-.fade-enter-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter {
-  @apply opacity-0;
-}
-</style>

@@ -4,8 +4,11 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const siteName = "Sarah Dayan";
+
 module.exports = {
-  siteName: "Sarah Dayan",
+  siteName,
+  titleTemplate: siteName,
   plugins: [
     {
       use: "gridsome-plugin-typescript"

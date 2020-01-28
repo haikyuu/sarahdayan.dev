@@ -5,6 +5,7 @@
     "platform": "Prismic Studio",
     "hosts": ["Sadek Drobi"],
     "date": "2019-11-27",
+    "type": "video",
     "featured": false
   },
   {
@@ -13,6 +14,7 @@
     "platform": "Prismic Studio",
     "hosts": ["Sadek Drobi"],
     "date": "2019-11-14",
+    "type": "video",
     "featured": false
   },
   {
@@ -21,6 +23,7 @@
     "platform": "Prismic Studio",
     "hosts": ["Sadek Drobi"],
     "date": "2019-10-16",
+    "type": "video",
     "featured": true
   },
   {
@@ -30,6 +33,7 @@
     "hosts": ["Rob Ocel"],
     "guests": ["Jake Dohm", "Adam Wathan"],
     "date": "2019-07-10",
+    "type": "video",
     "featured": false
   },
   {
@@ -38,6 +42,7 @@
     "platform": "Devchat.tv",
     "hosts": ["Charles Max Wood"],
     "date": "2019-06-25",
+    "type": "podcast",
     "featured": false
   },
   {
@@ -47,6 +52,7 @@
     "hosts": ["Charles Max Wood"],
     "guests": ["Joe Eames", "Aimee Knight", "Chris Ferdinandi", "AJ O’Neal"],
     "date": "2019-02-12",
+    "type": "podcast",
     "featured": false
   },
   {
@@ -55,6 +61,7 @@
     "platform": "Sam Jarman",
     "hosts": ["Sam Jarman"],
     "date": "2018-04-10",
+    "type": "blog",
     "featured": false
   }
 ]
