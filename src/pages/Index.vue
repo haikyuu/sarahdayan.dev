@@ -24,7 +24,9 @@
       </div>
       <p
         v-observe-visibility="showDesignerLine"
-        :class="[shouldShowDesignerLine ? 'opacity-75' : 'opacity-0 shift-y-16']"
+        :class="[
+          shouldShowDesignerLine ? 'opacity-75' : 'opacity-0 shift-y-16'
+        ]"
         class="text-sm mt-104 ml-104 md:ml-160 transition"
       >
         Design by
