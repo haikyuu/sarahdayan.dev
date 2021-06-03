@@ -1,10 +1,7 @@
 <template>
   <Layout>
     <ClientOnly>
-      
     
-
-      
     <div
         id="interviews"
         v-observe-visibility="onVisibilityChange(0)"
