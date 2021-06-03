@@ -35,7 +35,7 @@ const openGraph = [
   },
   {
     name: "og:image",
-    content: "https://sarahdayan.dev/sarah-dayan.jpg"
+    content: "https://ramiroalvfer.dev/images/KCDSpainPic.jpeg"
   },
   {
     name: "og:description",
