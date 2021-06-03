@@ -25,7 +25,10 @@ module.exports = ({ loadSource }) => {
     for (const item of interviews) {
       interviewCollection.addNode(item);
     }
-
+    for (const item of selectedRepositories) {
+      repositoryCollection.addNode(item);
+    }
+/*
     const repositories = await axios(
       "https://api.github.com/users/sarahdayan/repos"
     );
@@ -41,6 +44,7 @@ module.exports = ({ loadSource }) => {
         };
         repositoryCollection.addNode(enhancedRepository);
       }
-    }
+    }*/
   });
+  
 };

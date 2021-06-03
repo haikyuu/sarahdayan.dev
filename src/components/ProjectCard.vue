@@ -14,16 +14,20 @@
       >
         {{ capitalize(project.title) }}
       </h2>
+      
       <p class="mt-8">{{ project.description }}</p>
       <div class="flex items-center mt-16">
         <div class="w-16 h-16 p-2 mr-4">
           <star-icon aria-hidden="true" class="w-full h-full -mt-px fill-current" />
         </div>
         <span class="mt-2 text-xs font-semibold leading-none tracking-wider">
-          {{ formattedCount(project.stars) }}
-          <span class="sr-only">stars</span>
+          {{ (project.technology) }}
+          
         </span>
+
+        
       </div>
+
     </a>
   </article>
 </template>

@@ -1,67 +1,114 @@
 [
   {
-    "title": "Journey to JavaScript development",
-    "link": "https://www.youtube.com/watch?v=62C-E6WL0_A",
-    "platform": "Prismic Studio",
-    "hosts": ["Sadek Drobi"],
-    "date": "2019-11-27",
-    "type": "video",
+    "title": "AWS DevOps Engineer Professional",
+    "link": "https://ramiroalvfer.dev/images/DevOpsEngineerProfessional.pdf",
+    "platform": "AWS",
+    "date": "2021-05-25",
+    "type": "https://ramiroalvfer.dev/images/DevOpsEngineerProfessional.png",
     "featured": false
   },
   {
-    "title": "Moving from PHP to JavaScript",
-    "link": "https://www.youtube.com/watch?v=HW0BvDCSspE",
-    "platform": "Prismic Studio",
-    "hosts": ["Sadek Drobi"],
-    "date": "2019-11-14",
-    "type": "video",
+    "title": "Alibaba Cloud DevOps",
+    "link": "https://ramiroalvfer.dev/images/alibaba_devops_cert.png",
+    "platform": "Alibaba",
+    "date": "2021-01-11",
+    "type": "https://ramiroalvfer.dev/images/alibaba_devops_badge.png",
     "featured": false
   },
   {
-    "title": "Introduction to Atomic CSS",
-    "link": "https://www.youtube.com/watch?v=PcrzsCdoFoY",
-    "platform": "Prismic Studio",
-    "hosts": ["Sadek Drobi"],
-    "date": "2019-10-16",
-    "type": "video",
-    "featured": true
-  },
-  {
-    "title": "Utility-First CSS",
-    "link": "https://www.youtube.com/watch?v=Uzwbij42AjI",
-    "platform": " This Dot Media",
-    "hosts": ["Rob Ocel"],
-    "guests": ["Jake Dohm", "Adam Wathan"],
-    "date": "2019-07-10",
-    "type": "video",
+    "title": "Using Kubernetes to Manage Containers and Cluster Resources",
+    "link": "https://ramiroalvfer.dev/images/alibaba_k8s.png",
+    "platform": "Alibaba",
+    "date": "2021-01-05",
+    "type": "https://ramiroalvfer.dev/images/badge_alibaba_k8s.png",
     "featured": false
   },
   {
-    "title": "My JavaScript Story",
-    "link": "https://devchat.tv/my-javascript-story/mjs-113-sarah-dayan/",
-    "platform": "Devchat.tv",
-    "hosts": ["Charles Max Wood"],
-    "date": "2019-06-25",
-    "type": "podcast",
+    "title": "MongoDB Certified: DBA Associate Level",
+    "link": "https://ramiroalvfer.dev/images/mongodba.pdf",
+    "platform": "MongoDB",
+    "date": "2020-09",
+    "type": "https://ramiroalvfer.dev/images/mongodba.png",
     "featured": false
   },
   {
-    "title": "JavaScript Jabber",
-    "link": "https://devchat.tv/js-jabber/jsj-351-dinero-js-with-sarah-dayan/",
-    "platform": "Devchat.tv",
-    "hosts": ["Charles Max Wood"],
-    "guests": ["Joe Eames", "Aimee Knight", "Chris Ferdinandi", "AJ O’Neal"],
-    "date": "2019-02-12",
-    "type": "podcast",
+    "title": "Microsoft Certified Azure Fundamentals - AZ900",
+    "link": "https://ramiroalvfer.dev/images/AZ900.pdf",
+    "platform": "Azure",
+    "date": "2020-07",
+    "type": "https://ramiroalvfer.dev/images/AZ900.png",
     "featured": false
   },
   {
-    "title": "On Frontend Development and Staying Curious",
-    "link": "https://www.samjarman.co.nz/blog/sarah-dayan",
-    "platform": "Sam Jarman",
-    "hosts": ["Sam Jarman"],
-    "date": "2018-04-10",
-    "type": "blog",
+    "title": "Hashicorp Certified: Terraform Associate",
+    "link": "https://ramiroalvfer.dev/images/terraformAssociate.pdf",
+    "platform": "Hashicorp",
+    "date": "2020-06",
+    "type": "https://ramiroalvfer.dev/images/terraformAssociate.png",
+    "featured": false
+  },
+  {
+    "title": "Elastic Certified Engineer",
+    "link": "https://ramiroalvfer.dev/images/ElasticCertified.pdf",
+    "platform": "Elastic",
+    "date": "2020-04-10",
+    "type": "https://ramiroalvfer.dev/images/elastic.png",
+    "featured": false
+  },
+  {
+    "title": "Google Cloud Professional Cloud Architect",
+    "link": "https://ramiroalvfer.dev/images/ProfessionalCloudArchitect.pdf",
+    "platform": "GCP",
+    "date": "2019-12-27",
+    "type": "https://ramiroalvfer.dev/images/ProfessionalCloudArchitect.png",
+    "featured": false
+  },
+  {
+    "title": "Certified Kubernetes Application Developer - CKAD",
+    "link": "https://ramiroalvfer.dev/images/ckad.pdf",
+    "platform": "CNCF",
+    "date": "2019-07",
+    "type": "https://ramiroalvfer.dev/images/logo_ckad.png",
+    "featured": false
+  },
+  {
+    "title": "Google Cloud Associate Cloud Engineer",
+    "link": "https://www.credential.net/utpfud5p",
+    "platform": "GCP",
+    "date": "2019-04",
+    "type": "https://ramiroalvfer.dev/images/googlecloud.png",
+    "featured": false
+  },
+  {
+    "title": "AWS Developer Associate",
+    "link": "https://ramiroalvfer.dev/images/Developer.pdf",
+    "platform": "GCP",
+    "date": "2018-12",
+    "type": "https://ramiroalvfer.dev/images/Developer.png",
+    "featured": false
+  },
+  {
+    "title": "AWS Solutions Architect Associate",
+    "link": "https://ramiroalvfer.dev/images/SolutionsArchitect.pdf",
+    "platform": "AWS",
+    "date": "2018-11",
+    "type": "https://ramiroalvfer.dev/images/SolutionsArchitect.png",
+    "featured": false
+  },
+  {
+    "title": "AWS SysOps Administrator Associate",
+    "link": "https://ramiroalvfer.dev/images/SysOps.png",
+    "platform": "AWS",
+    "date": "2018-09",
+    "type": "https://ramiroalvfer.dev/images/SysOps.png",
+    "featured": false
+  },
+  {
+    "title": "Jenkins Engineer",
+    "link": "https://certificates.cloudbees.com/332kcaiy",
+    "platform": "Cloudbees",
+    "date": "2017-12",
+    "type": "https://ramiroalvfer.dev/images/Jenkins.png",
     "featured": false
   }
 ]

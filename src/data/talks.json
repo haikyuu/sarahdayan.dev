@@ -1,97 +1,58 @@
 [
   {
-    "title": "Test-Driven Development with Vue.js",
-    "event": "VueConf US",
+    "title": "Kubernetes PSP",
+    "event": "Cloud Native Asturias D'20",
     "location": {
-      "city": "Austin, TX",
-      "country": "USA"
+      "city": "Oviedo, Asturias",
+      "country": "Spain"
     },
-    "date": "2020-03-02"
-  },
-  {
-    "title": "In Defense of Utility-First CSS",
-    "event": "dotCSS",
-    "location": {
-      "city": "Paris",
-      "country": "France"
-    },
-    "date": "2019-12-04",
+    "date": "2020-12-21",
     "links": [
       {
         "label": "Video",
-        "link": "https://youtu.be/R50q4NES6Iw"
+        "link": "https://youtu.be/ufDk1LGd3dw"
       },
       {
-        "label": "Slides",
-        "link": "https://noti.st/sarahdayan/pmD0XT/in-defense-of-utility-first-css"
+        "label": "Repo",
+        "link": "https://github.com/empathyco/ops-kubernetes-psp"
       }
     ]
   },
   {
-    "title": "Test-Driven Development with Vue.js",
-    "event": "VueConf Toronto",
+    "title": "From Localhost to Prod",
+    "event": "DevFest Spain 2020",
     "location": {
-      "city": "Toronto",
-      "country": "Canada"
+      "city": "Madrid",
+      "country": "Spain"
     },
-    "date": "2019-11-11",
+    "date": "2020-09-10",
     "links": [
       {
         "label": "Video",
-        "link": "https://www.youtube.com/watch?v=DD1fEhcEzY8"
+        "link": "https://www.youtube.com/watch?v=i2OdR6EfJXg&t=3s"
       },
       {
-        "label": "Slides",
-        "link": "https://noti.st/sarahdayan/S5voPs/test-driven-development-with-vue-js"
+        "label": "Repo",
+        "link": "https://github.com/empathyco/ops-localhost-emulation"
       }
     ]
   },
   {
-    "title": "An Introduction to TDD with Vue.js",
-    "event": "Vue.js Paris #20",
+    "title": "Deploying Spark on the Cloud (GCP, AWS, Azure)",
+    "event": "DevFest Asturias",
     "location": {
-      "city": "Paris",
-      "country": "France"
+      "city": "Gijón",
+      "country": "Spain"
     },
-    "date": "2019-06-05",
-    "links": [
-      {
-        "label": "Slides",
-        "link": "https://noti.st/sarahdayan/4PecIH/an-introduction-to-tdd-with-vue-js"
-      }
-    ]
-  },
-  {
-    "title": "Scaling With(out) Middleman",
-    "event": "JAMstack Paris",
-    "location": {
-      "city": "Paris",
-      "country": "France"
-    },
-    "date": "2019-05-28",
+    "date": "2019-11-14",
     "links": [
       {
         "label": "Video",
-        "link": "https://youtu.be/6feV1DrCBdE"
-      }
-    ]
-  },
-  {
-    "title": "Building an Interactive Showcase with Vue.js & Vue InstantSearch",
-    "event": "Vue.js Paris #19",
-    "location": {
-      "city": "Paris",
-      "country": "France"
-    },
-    "date": "2019-01-15",
-    "links": [
-      {
-        "label": "Video",
-        "link": "https://www.youtube.com/watch?v=Zw-Ie5zPhYk"
+        "link": "https://www.youtube.com/watch?v=HREbuQbuv-k&t=7s"
       },
       {
-        "label": "Slides",
-        "link": "https://noti.st/sarahdayan/gjNQAg/building-an-interactive-showcase-with-vue-js-vue-instantsearch"
+        "label": "Repo",
+        "link": "https://github.com/empathyco/spark-cloudproviders"
       }
     ]
   }

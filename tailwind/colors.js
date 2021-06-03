@@ -1,9 +1,9 @@
 const colors = {
-  night: "#151515",
-  dusk: "#202022",
-  dawn: "#949495",
+  night: "#ffffff",
+  dusk: "#efefef",
+  dawn: "#464646",
   sunrise: "#f5f5fa",
-  zenith: "#ffffff"
+  zenith: "#151515"
 };
 
 module.exports = colors;

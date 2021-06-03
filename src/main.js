@@ -5,12 +5,12 @@ import DefaultLayout from "~/layouts/Default.vue";
 
 export const bus = new Vue();
 
-const title = "Sarah Dayan";
+const title = "Ramiro Alvarez";
 const description = [
-  "Sarah Dayan",
-  "Senior Software Engineer at Algolia",
-  "Creator of Dinero.js",
-  "TypeScript, JavaScript, Vue.js, CSS"
+  "Ramiro Alvarez",
+  "Senior DevOps Engineer at Empathy.co",
+  "Platform Engineering Tech Lead",
+  "AWS, GCP, Elasticsearch, MongoDB, K8s"
 ].join(" | ");
 
 const metadata = [
@@ -21,10 +21,6 @@ const metadata = [
   {
     name: "author",
     content: title
-  },
-  {
-    name: "designer",
-    content: "Nicolas Meuzard"
   }
 ];
 
@@ -65,6 +61,6 @@ export default function(Vue, { head, isClient }) {
   head.link.push({
     rel: "stylesheet",
     href:
-      "https://fonts.googleapis.com/css?family=Gothic+A1:400,600,700&display=swap"
+      "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
   });
 }

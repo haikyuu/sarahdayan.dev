@@ -1,27 +1,34 @@
 <template>
   <Layout>
     <ClientOnly>
-      <div
-        id="projects"
-        v-observe-visibility="onVisibilityChange(0)"
-        class="md:pt-88 md:-mt-96"
-      >
-        <all-projects :items="$page.repositories.edges" />
-      </div>
-      <div
-        id="talks"
-        v-observe-visibility="onVisibilityChange(1)"
-        class="pt-80 md:pt-88"
-      >
-        <all-talks :items="$page.talks.edges" />
-      </div>
-      <div
+      
+    
+
+      
+    <div
         id="interviews"
-        v-observe-visibility="onVisibilityChange(2)"
+        v-observe-visibility="onVisibilityChange(0)"
         class="mb-48 pt-80 md:pt-8"
       >
         <all-interviews class="md:mt-72" :items="$page.interviews.edges" />
       </div>
+
+      <div
+        id="talks"
+        v-observe-visibility="onVisibilityChange(1)"
+        class="pt-80 md:pt-88 mt-90 md:mt-88" 
+      >
+        <all-talks :items="$page.talks.edges" />
+      </div>
+
+     <div
+        id="projects"
+        v-observe-visibility="onVisibilityChange(2)"
+        class="md:pt-88 md:-mt-96"
+      >
+        <all-projects :items="$page.repositories.edges" />
+      </div>
+
       <p
         v-observe-visibility="showDesignerLine"
         :class="[
@@ -31,28 +38,28 @@
       >
         Design by
         <a
-          class="text-sunrise hover:text-zenith transition hover:underline"
-          href="https://dribbble.com/NicolasMzrd"
+          class="text-zenith hover:text-dawn transition hover:underline"
+          href="https://alexalbuerne.com/"
           target="_blank"
           rel="noopener"
-          >Nicolas Meuzard</a
+          >Alex Albuerne</a
         >.
       </p>
+
     </ClientOnly>
   </Layout>
 </template>
 
 <page-query>
 query {
-  repositories: allRepository(sortBy: "stargazers_count", order: DESC) {
+  repositories: allRepository {
     edges {
       node {
         id
-        title: name
+        title
+        link
         description
-        link: html_url
-        language
-        stars: stargazers_count
+        technology
       }
     }
   }
@@ -81,8 +88,6 @@ query {
         title
         link
         platform
-        hosts
-        guests
         date
         type
       }
@@ -102,9 +107,9 @@ import AllInterviews from "@/partials/AllInterviews";
 
 export default Vue.extend({
   components: {
+    AllInterviews,
     AllProjects,
-    AllTalks,
-    AllInterviews
+    AllTalks
   },
   data() {
     return {

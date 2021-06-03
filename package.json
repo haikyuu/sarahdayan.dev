@@ -1,5 +1,5 @@
 {
-  "name": "sarahdayan.dev",
+  "name": "ramiroalvfer.dev",
   "private": true,
   "scripts": {
     "build": "gridsome build",
@@ -8,10 +8,12 @@
     "lint": "eslint 'src/**/*.{vue,js}' --fix"
   },
   "dependencies": {
+    "bootstrap-vue": "^2.21.2",
     "gridsome": "^0.7.0",
     "vue-observe-visibility": "^0.4.6",
     "vue-resize-directive": "^1.2.0",
-    "vue2-smooth-scroll": "^1.2.0"
+    "vue2-smooth-scroll": "^1.2.0",
+    "vue-template-compiler": "^2.6.13"
   },
   "devDependencies": {
     "axios": "^0.19.0",

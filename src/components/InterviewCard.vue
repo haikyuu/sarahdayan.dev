@@ -7,14 +7,9 @@
       rel="noopener"
     >
       <div
-        class="flex items-center justify-center flex-none mr-24 rounded-full md:mr-40 w-80 h-80 md:w-120 md:h-120 bg-dusk text-zenith group-2-hover:scale-11/10x transition"
+        class="flex items-center justify-center flex-none mr-24 md:mr-40 w-80 h-80 md:w-120 md:h-120  text-zenith group-2-hover:scale-11/10x transition"
       >
-        <component
-          :is="getIcon(interview.type)"
-          aria-hidden="true"
-          :class="{ 'ml-4': interview.type === 'video' }"
-          class="h-24 stroke-current md:h-32"
-        />
+      <b-img v-bind="mainProps" :src="getImage(interview.type)" rounded="circle" alt="Circle image"></b-img>
       </div>
       <div>
         <h2
@@ -24,10 +19,8 @@
           {{ interview.title }}
         </h2>
         <p class="mt-8 mb-2">
-          <span itemprop="publisher">{{ interview.platform }}</span> — with
-          <span itemprop="author">
-            {{ merge(interview.hosts, interview.guests).join(", ") }}
-          </span>
+          <span itemprop="publisher">{{ interview.platform }}</span>
+         
         </p>
         <time
           class="inline-block mt-8 text-xs font-bold tracking-widest uppercase text-zenith"
@@ -43,6 +36,9 @@
 
 <script lang="ts">
 import Vue, { PropType } from "vue";
+
+import { BImg } from 'bootstrap-vue'
+Vue.component('b-img', BImg)
 
 import { formattedDate } from "@/utils/date";
 import mergeArrays from "@/utils/mergeArrays";
@@ -62,10 +58,9 @@ type Interview = {
   type: Icon;
   title: string;
   platform: string;
-  hosts: string[];
-  guests: string[];
   date: string;
 };
+
 
 export default Vue.extend({
   components: { PlayIcon, QuillIcon, VolumeIcon },
@@ -76,6 +71,10 @@ export default Vue.extend({
     }
   },
   methods: {
+    getImage(imageId:string) {
+        const { width, height } = this.mainProps
+        return `${imageId}`
+    },
     formattedDate,
     getIcon(slug: Icon) {
       const icons = {
@@ -87,6 +86,12 @@ export default Vue.extend({
       return icons[slug];
     },
     merge: mergeArrays
-  }
+  },
+
+  data() {
+      return {
+        mainProps: { width: 100, height: 100, class: 'm1' }
+      }
+    }
 });
 </script>

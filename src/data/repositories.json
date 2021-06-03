@@ -1,14 +1,16 @@
 [
   {
-    "name": "dinero.js",
+    "title": "Monitor AWS Credentials",
+    "link": "https://medium.com/empathyco/how-to-monitor-the-age-of-your-aws-credentials-using-terraform-go-aws-lambda-and-slack-a9cc0ad322a",
+    "description": "Published on Medium",
+    "technology": "AWS, Terraform, Serverless",
     "featured": true
   },
   {
-    "name": "snippets.js",
-    "featured": false
-  },
-  {
-    "name": "browserstore.js",
-    "featured": false
+    "title": "Running Apache Flink on Kubernetes",
+    "link": "https://medium.com/empathyco/running-apache-flink-on-kubernetes-10815a26559e",
+    "description": "Published on Medium and DZone",
+    "technology": "Flink, K8s",
+    "featured": true
   }
 ]

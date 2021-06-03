@@ -11,34 +11,21 @@
           <h1
             class="text-2xl font-bold leading-tight lg:text-4xl lg:leading-none text-zenith"
           >
-            Hello, I’m Sarah Dayan.
+            Hello, I’m Ramiro Alvarez.
           </h1>
           <div class="leading-loose">
             <p class="mt-32">
-              I’m a Senior Software Engineer currently working as Tech Lead of
-              the Doc Squad at
+              I’m a Senior DevOps Engineer currently working as Tech Lead of
+              the Platform Engineering Team at
               <a
                 class="underline text-zenith"
-                href="https://www.algolia.com/"
+                href="https://www.empathy.co/"
                 target="_blank"
                 rel="noopener"
-                >Algolia</a
-              >. I mostly do front-end development, and I’m a
-              <a
-                class="underline text-zenith"
-                href="https://vuejs.org/"
-                rel="noopener"
-                >Vue.js</a
-              >
-              and CSS nerd. I can't shut up about test-driven development and
-              utility-first CSS. I also share what I learn on my blog
-              <a
-                class="underline text-zenith"
-                href="http://frontstuff.io"
-                target="_blank"
-                rel="noopener"
-                >frontstuff.io</a
-              >, or at meetups and conferences.
+                >Empathy.co</a
+              >. I mostly manage Kubernetes Clusters, CI/CD orchestration, Elasticsearch, MongoDB and try to break
+              things on AWS, GCP and Azure.
+              I'm a big fan of Anton Babenko and if I'm not online you can find me on Pagerduty.
             </p>
           </div>
         </div>
@@ -48,7 +35,10 @@
           :items="items"
         />
       </div>
-      <social-links class="w-full mt-32 md:mt-72" />
+      <div class="flex items-center justify-between mt-48 md:mt-72"> 
+        <img class="mr-64" src="https://avatars.githubusercontent.com/u/33934998?v=4" alt="circle" style="width: 50px;height: 50px; border-radius: 50%;"></img>
+        <social-links class="w-full" />
+      </div>
     </div>
     <div
       class="static p-32 md:max-w-536 lg:max-w-736 md:absolute md:right-0 lg:py-88 lg:pr-88 md:pl-0"
@@ -93,9 +83,9 @@ export default Vue.extend({
   data() {
     return {
       items: [
-        { label: "Projects", link: "#projects" },
+        { label: "Certifications", link: "#interviews" },
         { label: "Talks", link: "#talks" },
-        { label: "Interviews", link: "#interviews" }
+        { label: "Articles", link: "#projects" }
       ],
       active: 0
     };
