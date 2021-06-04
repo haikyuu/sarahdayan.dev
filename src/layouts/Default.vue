@@ -36,7 +36,7 @@
         />
       </div>
       <div class="flex items-center justify-between mt-48 md:mt-72"> 
-        <img class="mr-64" src="https://avatars.githubusercontent.com/u/33934998?v=4" alt="circle" style="width: 50px;height: 50px; border-radius: 50%;"></img>
+        <img class="mr-64" src="https://ramiroalvfer.dev/images/KCDSpainPic.jpeg" alt="circle" style="width: 50px;height: 50px; border-radius: 50%;"></img>
         <social-links class="w-full" />
       </div>
     </div>
