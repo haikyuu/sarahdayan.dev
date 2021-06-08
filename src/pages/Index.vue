@@ -33,7 +33,7 @@
         ]"
         class="text-sm mt-104 ml-104 md:ml-160 transition"
       >
-        Design by
+        Re-designed by
         <a
           class="text-zenith hover:text-dawn transition hover:underline"
           href="https://alexalbuerne.com/"
