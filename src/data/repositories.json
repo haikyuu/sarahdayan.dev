@@ -12,5 +12,12 @@
     "description": "Published on Medium and DZone",
     "technology": "Flink, K8s",
     "featured": true
+  },
+  {
+    "title": "Running Apache Spark on Kubernetes",
+    "link": "https://medium.com/empathyco/running-apache-spark-on-kubernetes-2e64c73d0bb2",
+    "description": "Published on Medium",
+    "technology": "Apache Spark, K8s",
+    "featured": true
   }
 ]
