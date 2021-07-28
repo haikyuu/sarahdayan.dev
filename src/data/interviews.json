@@ -1,10 +1,18 @@
 [
   {
+    "title": "Certified Kubernetes Administrator",
+    "link": "https://ramiroalvfer.dev/images/cka.pdf",
+    "platform": "CNCF",
+    "date": "2021-07-28",
+    "type": "https://ramiroalvfer.dev/images/cka.png",
+    "featured": false
+  },
+  {
     "title": "Chaos Engineering Practitioner",
     "link": "https://ramiroalvfer.dev/images/GremlinChaosEngineering.pdf",
     "platform": "Gremlin",
     "date": "2021-07-22",
-    "type": "https://gremlin.awsworkshop.io/images/gremlin_mascot.png",
+    "type": "https://ramiroalvfer.dev/images/GremlinChaosEngineering.png",
     "featured": false
   },
   {
