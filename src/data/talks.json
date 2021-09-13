@@ -9,6 +9,10 @@
     "date": "2021-06-08",
     "links": [
       {
+        "label": "Video",
+        "link": "https://youtu.be/UBZqr8q9ygo"
+      },
+      {
         "label": "Repo",
         "link": "https://github.com/empathyco/platform-spark-kubernetes-samples"
       }
