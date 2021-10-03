@@ -1,8 +1,16 @@
 [
   {
+    "title": "FinOps Certified Practitioner",
+    "link": "https://ramiroalvfer.dev/images/finops.pdf",
+    "platform": "Linux Foundation",
+    "date": "2021-10-03",
+    "type": "https://ramiroalvfer.dev/images/finops.png",
+    "featured": false
+  },
+  {
     "title": "Certified Kubernetes Administrator",
     "link": "https://ramiroalvfer.dev/images/cka.pdf",
-    "platform": "CNCF",
+    "platform": "Linux Foundation",
     "date": "2021-07-28",
     "type": "https://ramiroalvfer.dev/images/cka.png",
     "featured": false
@@ -50,7 +58,7 @@
   {
     "title": "Certified Kubernetes Application Developer - CKAD",
     "link": "https://ramiroalvfer.dev/images/ckad.pdf",
-    "platform": "CNCF",
+    "platform": "Linux Foundation",
     "date": "2019-07",
     "type": "https://ramiroalvfer.dev/images/logo_ckad.png",
     "featured": false
