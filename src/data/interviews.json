@@ -1,5 +1,13 @@
 [
   {
+    "title": "AWS Solutions Architect Professional",
+    "link": "https://ramiroalvfer.dev/images/AWSCertifiedSolutionsArchitectProfessional.pdf",
+    "platform": "AWS",
+    "date": "2021-10-25",
+    "type": "https://ramiroalvfer.dev/images/AWSCertifiedSolutionsArchitectProfessional.png",
+    "featured": false
+  },
+  {
     "title": "FinOps Certified Practitioner - FOCP",
     "link": "https://ramiroalvfer.dev/images/finops.pdf",
     "platform": "Linux Foundation",
