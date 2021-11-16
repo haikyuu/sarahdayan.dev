@@ -8,16 +8,37 @@
   },
   {
     "title": "Running Apache Flink on Kubernetes",
-    "link": "https://medium.com/empathyco/running-apache-flink-on-kubernetes-10815a26559e",
-    "description": "Published on Medium and DZone",
+    "link": "https://dzone.com/articles/running-apache-flink-on-kubernetes",
+    "description": "Published on Medium, DZone",
     "technology": "Flink, K8s",
     "featured": true
   },
   {
     "title": "Running Apache Spark on Kubernetes",
-    "link": "https://medium.com/empathyco/running-apache-spark-on-kubernetes-2e64c73d0bb2",
+    "link": "https://dzone.com/articles/running-apache-spark-on-kubernetes",
     "description": "Published on Medium",
     "technology": "Apache Spark, K8s",
+    "featured": true
+  },
+  {
+    "title": "Success Story: From AWS EMR to Kubernetes",
+    "link": "https://dzone.com/articles/success-story-from-aws-emr-to-kubernetes",
+    "description": "Published on Medium, DZone",
+    "technology": "Apache Spark, K8s",
+    "featured": true
+  },
+  {
+    "title": "Cloud FinOps, Part 1: Principles",
+    "link": "https://medium.com/empathyco/cloud-finops-part-1-principles-79b88aeeab4f",
+    "description": "Published on Medium",
+    "technology": "Cloud FinOps",
+    "featured": true
+  },
+  {
+    "title": "Cloud FinOps — Part 2: Tag Allocation Strategy",
+    "link": "https://medium.com/empathyco/tag-allocation-strategy-part-2-3c7f8595186a",
+    "description": "Published on Medium",
+    "technology": "Cloud FinOps",
     "featured": true
   }
 ]
