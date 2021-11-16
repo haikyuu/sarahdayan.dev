@@ -1,5 +1,24 @@
 [
   {
+    "title": "Tag Allocation Strategies",
+    "event": "Hashitalks Spain 2021",
+    "location": {
+      "city": "Madrid",
+      "country": "Spain"
+    },
+    "date": "2021-11-04",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/0JdG9kP6EB0?list=PL81sUbsFNc5a9a3tHKJXBqssaU4_nhGpG"
+      },
+      {
+        "label": "Slides",
+        "link": "https://drive.google.com/file/d/1r5rQVbMPGX4dx3TufpChmJFNLRbPtRkF/view?usp=sharing"
+      }
+    ]
+  },
+  {
     "title": "Running Apache Spark on K8s",
     "event": "Kubernetes Community Days Spain",
     "location": {
