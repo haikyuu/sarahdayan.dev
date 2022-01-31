@@ -1,5 +1,13 @@
 [
   {
+    "title": "Kubernetes and Cloud Native Associate - KCNA",
+    "link": "https://ramiroalvfer.dev/images/KCNA.pdf",
+    "platform": "Linux Foundation",
+    "date": "2022-01-26",
+    "type": "https://ramiroalvfer.dev/images/KCNA.png",
+    "featured": false
+  },
+  {
     "title": "AWS Solutions Architect Professional",
     "link": "https://ramiroalvfer.dev/images/AWSCertifiedSolutionsArchitectProfessional.pdf",
     "platform": "AWS",

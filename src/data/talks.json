@@ -1,5 +1,43 @@
 [
   {
+    "title": "Kubernetes Backup y estrategias de migración con Velero",
+    "event": "Kubernetes Community Days Guatemala",
+    "location": {
+      "city": "Ciudad de Guatemala",
+      "country": "Guatemala"
+    },
+    "date": "2021-11-27",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/bHRBWbPkuX8"
+      },
+      {
+        "label": "Slides",
+        "link": "https://github.com/empathyco/platform-velero-showcases/blob/main/slides/Kubernetes%20Backup%20and%20Migration%20Strategies%20with%20Velero.pdf"
+      }
+    ]
+  },
+  {
+    "title": "Kubernetes Backup and Migration Strategies with Velero",
+    "event": "Kubernetes Community Days Italy",
+    "location": {
+      "city": "Milán",
+      "country": "Italy"
+    },
+    "date": "2021-11-18",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/xe-ZCvbrnoM?list=PLj6h78yzYM2M3cMd-zoDppjMo9eRmQrYU"
+      },
+      {
+        "label": "Slides",
+        "link": "https://github.com/empathyco/platform-velero-showcases/blob/main/slides/Kubernetes%20Backup%20and%20Migration%20Strategies%20with%20Velero.pdf"
+      }
+    ]
+  },
+  {
     "title": "Tag Allocation Strategies",
     "event": "Hashitalks Spain 2021",
     "location": {
