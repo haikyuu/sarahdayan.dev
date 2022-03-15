@@ -1,5 +1,13 @@
 [
   {
+    "title": "Neo4j Certified Professional",
+    "link": "https://ramiroalvfer.dev/images/Neo4jProfessional.pdf",
+    "platform": "Neo4j",
+    "date": "2022-03-14",
+    "type": "https://ramiroalvfer.dev/images/Neo4jProfessional.png",
+    "featured": false
+  },
+  {
     "title": "Kubernetes and Cloud Native Associate - KCNA",
     "link": "https://ramiroalvfer.dev/images/KCNA.pdf",
     "platform": "Linux Foundation",
