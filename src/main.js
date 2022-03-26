@@ -8,7 +8,7 @@ export const bus = new Vue();
 const title = "Ramiro Alvarez";
 const description = [
   "Ramiro Alvarez",
-  "Senior DevOps Engineer at Empathy.co",
+  "Staff Platform Engineer at Empathy.co",
   "Platform Engineering Tech Lead",
   "AWS, GCP, Elasticsearch, MongoDB, K8s"
 ].join(" | ");
