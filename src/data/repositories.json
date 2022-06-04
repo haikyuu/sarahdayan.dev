@@ -40,5 +40,12 @@
     "description": "Published on Medium",
     "technology": "Cloud FinOps",
     "featured": true
+  },
+  {
+    "title": "Cloud FinOps — Part 4: Kubernetes Cost Report",
+    "link": "https://medium.com/empathyco/cloud-finops-part-4-kubernetes-cost-report-b4964be02dc3",
+    "description": "Published on Medium",
+    "technology": "Cloud FinOps",
+    "featured": true
   }
 ]
