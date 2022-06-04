@@ -1,5 +1,43 @@
 [
   {
+    "title": "Cloud FinOps & Sustainability on Kubernetes",
+    "event": "Cloud Native Rejekts 2022",
+    "location": {
+      "city": "Valencia",
+      "country": "Spain"
+    },
+    "date": "2022-05-14",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/S07OdFshwDk?t=18493"
+      },
+      {
+        "label": "Slides",
+        "link": "https://github.com/empathyco/kubernetes-cost-report"
+      }
+    ]
+  },
+  {
+    "title": "Cloud FinOps & Sustainability on Kubernetes",
+    "event": "WTFisSRE 2022",
+    "location": {
+      "city": "Amsterdam",
+      "country": "Nederlands"
+    },
+    "date": "2022-04-28",
+    "links": [
+      {
+        "label": "Video",
+        "link": "https://youtu.be/VXj1tomrJjY"
+      },
+      {
+        "label": "Slides",
+        "link": "https://github.com/empathyco/kubernetes-cost-report"
+      }
+    ]
+  },
+  {
     "title": "Kubernetes Backup y estrategias de migración con Velero",
     "event": "Kubernetes Community Days Guatemala",
     "location": {
